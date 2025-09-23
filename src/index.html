@@ -29,15 +29,50 @@
         <!-- This will contain the content of the brainrotters-->
         <main id="main">
             <!-- Maybe start off with a video to introduce the character -->
-            <section>
-                <video controls>
-                    <source src="video.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
+            <section id="intro-video">
+                <!-- Provided by Youtube -->
+                <iframe 
+                    width="560" 
+                    height="315" 
+                    src="https://www.youtube.com/embed/KZoipAb2fo4?si=eZGxS-RtXpslkIK5"
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    referrerpolicy="strict-origin-when-cross-origin" 
+                    allowfullscreen>
+                </iframe>
             </section>
 
             <!-- First should be just pictures or Modal -->
-            <section>
+            <section id="brainrotters">
+                <h2>Brainrotters</h2>
+                <div id="brainrotter-gallery">
+                    <div class="brainrotter-entry">
+                        <img src="./assets/TungTung.webp" alt="Tung Tung">
+                        <p class="name">Tung tung tung sahur</p>
+                    </div>
+                    <div class="brainrotter-entry">
+                        <img src="./assets/Tralala.webp" alt="Tralala">
+                        <p class="name">Tralalero Tralala</p>
+                    </div>
+                    <div class="brainrotter-entry">
+                        <img src="./assets/Capp.avif" alt="Cappuccina Assassino">
+                        <p class="name">Cappuccina Assassino</p>
+                    </div>
+                    <div class="brainrotter-entry">
+                        <img src="./assets/BrrBrr.jpg" alt="Brr Brr">
+                        <p class="name">Brr Brr Patapim</p>
+                    </div>
+                    <div class="brainrotter-entry">
+                        <img src="./assets/Bombardiro_Crocodillo.jpg.webp" alt="Bombardiro Crocodillo">
+                        <p class="name">Bombardiro Crocodillo</p>
+                    </div>
+                    <div class="brainrotter-entry">
+                        <img src="./assets/Ballerina.webp" alt="Ballerina">
+                        <p class="name">Ballerina Cappuccina</p>
+                    </div>
+                    <!-- Add more brainrotters as needed -->
+                </div>
             </section>
 
             <!-- Then we add a section for their story -->
