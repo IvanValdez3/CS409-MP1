@@ -8,22 +8,59 @@
     </head>
 
     <body>
+        <!-- First We start off with a header-->
         <header id="header">
             <h1 id="title">Steal A BrainRot</h1>
 
+            <!-- Then we add a navigation menu
+                TODO: resize when scrolling (both letters and bar)
+                      When the user is scrolling it should highlight the current section
+                      Should have smooth scrolling when moving to sections -->
+            <nav id="nav">
+                <ul>
+                    <li><a href="#main">Brainrotters</a></li>
+                    <li><a href="#footer">Story of their life</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </nav>
         </header>
 
+        
+        <!-- This will contain the content of the brainrotters-->
         <main id="main">
+            <!-- Maybe start off with a video to introduce the character -->
+            <section>
+                <video controls>
+                    <source src="video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </section>
+
+            <!-- First should be just pictures or Modal -->
             <section>
             </section>
 
+            <!-- Then we add a section for their story -->
+            <!-- This can be the Carousel-->
             <section>
             </section>
 
+            <!-- Third we add a section for contact information, obv joke -->
+             <!-- This can be the the Multi-Column Content-->
+            <section>
+                <h2>Contact</h2>
+                <p>Email: brainrotters@example.com</p>
+            </section>
+
+            <!-- Finally we can use this to add a background Image as an ending-->
+            <section>
+                <div class="background-image">
+                </div>
+            </section>
         </main>
 
         <footer id="footer">
+            <!-- This is the footer, I can probably just use this for socials -->
         </footer>
-            <img src="assets/image.jpg">
     </body>
 </html>
