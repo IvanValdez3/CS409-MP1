@@ -37,6 +37,7 @@
             <section id="intro-video">
                 <!-- Provided by Youtube -->
                 <iframe 
+                    id="intro-video-iframe"
                     width="560" 
                     height="315" 
                     src="https://www.youtube.com/embed/KZoipAb2fo4?si=eZGxS-RtXpslkIK5"
@@ -47,6 +48,9 @@
                     allowfullscreen>
                 </iframe>
             </section>
+
+            <!-- https://developers.google.com/youtube/player_parameters#loop -->
+            <script src="https://www.youtube.com/iframe_api"></script>
 
             <!-- First should be just pictures or Modal -->
             <section id="brainrotters">
@@ -125,5 +129,6 @@
         <footer id="footer">
             <!-- This is the footer, I can probably just use this for socials -->
         </footer>
+        <script src="./js/main.js"></script>
     </body>
 </html>

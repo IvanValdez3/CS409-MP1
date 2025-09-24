@@ -27,3 +27,25 @@ document.querySelectorAll('.nav-right a').forEach(link => {
         }
     });
 });
+
+//Looking at youtube documentation for allowing a video to be played on repeat
+//https://developers.google.com/youtube/player_parameters#loop
+
+let player;
+
+function onYouTubeIframeAPIReady() {
+    player = new YT.Player('intro-video-iframe');
+}
+
+const introVideo = document.getElementById('intro-video');
+const play = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            player.playVideo();
+        } else {
+            player.pauseVideo();
+        }
+    });
+});
+
+play.observe(introVideo);
