@@ -1,1 +1,71 @@
 /* Your SCSS here. */
+
+/*Starting from the top and trying to work down*/
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+/*TODO: Make the nav bar stick to the top of the page
+        have it enlarge at the top of the page and shrink going down*/
+        
+#nav {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0 2rem;
+    height: 60px;
+    background-color: azure;
+    transition: all 0.3s ease;
+    z-index: 100;
+
+    &.shrink {
+        height: 40px;
+
+        h1 {
+            font-size: 1.5rem;
+        }
+
+        a {
+            font-size: 0.9rem;
+        }
+    }
+
+
+    .nav-left {
+        h1 {
+            font-size: 2rem;
+            margin: 0;
+            transition: all 0.3s ease;
+        }
+    }
+
+    .nav-right {
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 1.5rem;
+
+            a {
+                text-decoration: none;
+                color: black;
+                transition: all 0.3s ease;
+                font-size: 1.5rem;
+
+                &.active {
+                    color: red;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

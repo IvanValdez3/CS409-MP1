@@ -10,18 +10,23 @@
     <body>
         <!-- First We start off with a header-->
         <header id="header">
-            <h1 id="title">Steal A BrainRot</h1>
+            <nav id="nav">
+                <!-- want to have the title on the left and options on the right-->
+                <div class="nav-left">
+                    <h1 id="title">Steal A BrainRot</h1>
+                </div>
 
             <!-- Then we add a navigation menu
                 TODO: resize when scrolling (both letters and bar)
                       When the user is scrolling it should highlight the current section
                       Should have smooth scrolling when moving to sections -->
-            <nav id="nav">
-                <ul>
-                    <li><a href="#main">Brainrotters</a></li>
-                    <li><a href="#footer">Story of their life</a></li>
-                    <li><a href="#footer">Contact</a></li>
-                </ul>
+                <div class="nav-right">
+                    <ul>
+                        <li><a href="#main">Brainrotters</a></li>
+                        <li><a href="#footer">Story of their life</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
             </nav>
         </header>
 
