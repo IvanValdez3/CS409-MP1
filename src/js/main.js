@@ -4,6 +4,8 @@ console.log('Hello World!')
 /*The goal is simple when we scroll the navbar and it's contents should shrink,
   but return to normal when at the top*/
 
+//Random comment to commit
+
 window.addEventListener('scroll', function() {
     const nav = document.getElementById('nav');
     const scrollPosition = window.scrollY;
