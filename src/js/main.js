@@ -28,24 +28,49 @@ document.querySelectorAll('.nav-right a').forEach(link => {
     });
 });
 
-//Looking at youtube documentation for allowing a video to be played on repeat
-//https://developers.google.com/youtube/player_parameters#loop
 
-let player;
-
-function onYouTubeIframeAPIReady() {
-    player = new YT.Player('intro-video-iframe');
-}
-
-const introVideo = document.getElementById('intro-video');
-const play = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            player.playVideo();
-        } else {
-            player.pauseVideo();
+// In my page I want the video to play endlessly and autoplay
+document.addEventListener('DOMContentLoaded', function() {
+    const videoElement = document.getElementById('intro-video-element');
+    
+    if (videoElement) {
+        videoElement.muted = true;
+        videoElement.loop = true;
+        videoElement.autoplay = true;
+        
+        videoElement.addEventListener('loadeddata', function() {
+            console.log('Video loaded and ready to play');
+        });
+        
+        videoElement.addEventListener('error', function(e) {
+            console.log('Error with the video:', e);
+        });
+        
+        videoElement.addEventListener('canplay', function() {
+            videoElement.play().catch(function(error) {
+                console.log('Autoplay prevented:', error);
+            });
+        });
+        
+        //I think it would be nice to allow it to play when it's on screen
+        //but pause when it's not that way the user doesn't miss anything
+        const introVideoSection = document.getElementById('intro-video');
+        const videoObserver = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && videoElement) {
+                    videoElement.play().catch(function(error) {
+                        console.log('Play prevented:', error);
+                    });
+                } else if (!entry.isIntersecting && videoElement) {
+                    videoElement.pause();
+                }
+            });
+        }, {
+            threshold: 0.3 // This should play when 30% of video section is visible
+        });
+        
+        if (introVideoSection) {
+            videoObserver.observe(introVideoSection);
         }
-    });
+    }
 });
-
-play.observe(introVideo);

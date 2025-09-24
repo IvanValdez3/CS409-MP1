@@ -31,26 +31,23 @@
         </header>
 
         
-        <!-- This will contain the content of the brainrotters-->
         <main id="main">
-            <!-- Maybe start off with a video to introduce the character -->
+            <!-- I can't use iframe, bc the requirements says i need to use
+                 the video tag directly -->
             <section id="intro-video">
-                <!-- Provided by Youtube -->
-                <iframe 
-                    id="intro-video-iframe"
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/KZoipAb2fo4?si=eZGxS-RtXpslkIK5"
-                    title="YouTube video player" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                    referrerpolicy="strict-origin-when-cross-origin" 
-                    allowfullscreen>
-                </iframe>
+                <video 
+                    id="intro-video-element"
+                    width="800" 
+                    height="450"
+                    autoplay 
+                    loop 
+                    muted
+                    controls
+                    preload="auto">
+                    <source src="./assets/videoplayback.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
             </section>
-
-            <!-- https://developers.google.com/youtube/player_parameters#loop -->
-            <script src="https://www.youtube.com/iframe_api"></script>
 
             <!-- First should be just pictures or Modal -->
             <section id="brainrotters">
